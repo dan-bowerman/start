@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />		
+		<title>Start</title>
+		<style type="text/css">
+			BODY {
+				background-color: #000000;
+				height: 100%;
+				width: 95%;
+				color: #FFD800;
+				font-family: Tahoma, Geneva, sans-serif;
+				font-variant: small-caps;
+			}
+			A { 
+				color: #FFD800;
+				text-decoration: none; 
+				font-size: 85%; 
+				font-family: Tahoma, Geneva, sans-serif; 
+			}
+			A:hover {
+				color: #6BA6FF;
+				text-decoration: none;
+			}
+			INPUT { 
+				font-size: 24px; 
+				font-variant: small-caps;
+				font-weight: bold;
+				background: transparent;
+				color: #FFD800; 
+				height: 40px; 
+				width: 80%; 
+				font-family: Tahoma, Geneva, sans-serif; 
+				border: 1px solid #FFD800; 
+				background-repeat: no-repeat; 
+				background-position: right; 
+			}
+			FORM { display: inline; }
+			UL { list-style-type: none; padding:0; margin:0; }
+			LABEL { display: none; }
+			img { border: none; }  
+			.buttons { 
+				height: 63px; 
+				width: 63px; 
+				padding: 2px; 
+			}
+			.shortcuts { 
+				text-align: center; 
+				padding-left: 50px; 
+				padding-right: 50px; 
+			}
+			#news {
+				position: absolute; 
+				width: 100%;
+			}
+			.gobutton {
+				font-size:42px;
+				vertical-align:middle;
+			}
+			.searchboxes {
+				text-align: center;	
+			}
+			.h {
+				text-align: center;	
+			}
+			.weather_shortcuts { padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; }
+		</style>
+		<script language="JavaScript" type="text/javascript">
+			function wikipedia(){ document.frmWiki.search.value.length == 0 ? window.location = "http://en.wikipedia.org/wiki/Main_Page" : document.frmWiki.submit(); }
+			function google(){ document.frmGoogle.q.value.length == 0 ? window.location = "http://www.google.ca" :	document.frmGoogle.submit(); }
+		</script>		
+	</head>
+	<body>
+		<div class="searchboxes">
+			<form name="frmGoogle" action="http://www.google.ca/search" method="get">
+				<a onclick="javascript: google();"><span class="gobutton">&lt;</span></a>
+				<label for="Google">Google</label>
+				<input name="q" style="background-image: url(images/google.png);" id="Google"/>
+				<a onclick="javascript: google();"><span class="gobutton">&gt;</span></a>
+			</form><br/>   
+			<form name="frmWiki" action="http://en.wikipedia.org/wiki/Special:Search">
+				<a onclick="javascript: wikipedia();"><span class="gobutton">&lt;</span></a>
+				<label for="Wikipedia">Wikipedia</label>
+				<input name="search" accesskey="f" style="background-image: url(images/wikipedia.png);" id="Wikipedia" />
+				<a onclick="javascript: wikipedia();"><span class="gobutton">&gt;</span></a>
+			</form><br/>	
+			<form name="frmUrban" action="http://www.urbandictionary.com/define.php" method="get">
+				<a onclick="javascript: frmUrban.submit();"><span class="gobutton">&lt;</span></a>
+				<label for="UrbanDictionary">Urban Dictionary</label>
+				<input name="term" style="background-image: url(images/urban.png);" id="UrbanDictionary"/>
+				<a onclick="javascript: frmUrban.submit();"><span class="gobutton">&gt;</span></a>
+			</form>
+		</div>
+		<div class="shortcuts">
+	
+			<span class="google_shortcuts">
+				<a href="https://mail.google.com/mail/ca"><img class="buttons" src="images/gmail.png" alt="GMail"/></a>
+				<a href="http://plus.google.com"><img class="buttons" src="images/plus.png" alt="Plus"/></a>
+				<a href="https://plus.google.com/hangouts"><img class="buttons" src="images/hangouts.png" alt="Hangouts"/></a>
+				<a href="http://translate.google.com/#"><img class="buttons" src="images/translate.png" alt="Translate"/></a>
+				<a href="http://maps.google.ca/#"><img class="buttons" src="images/maps.png" alt="Maps"/></a>
+				<a href="http://drive.google.com/"><img class="buttons" src="images/drive.png" alt="Drive"/></a>
+				<a href="http://drive.google.com/keep"><img class="buttons" src="images/keep.png" alt="Keep"/></a>
+				<a href="https://www.google.com/calendar/render?pli=1"><img class="buttons" src="images/calendar.png" alt="Calendar"/></a>
+				<a href="https://play.google.com/music/listen#/now"><img class="buttons" src="images/playmusic.png" alt="Play Music"></a>				
+			</span>
+			<span class="social_shortcuts">
+				<a href="http://feedly.com/"><img class="buttons" src="images/feedly.png" alt="Feedly"/></a>
+				<a href="http://facebook.com/?sk=lf"><img class="buttons" src="images/facebook.png" alt="Facebook"/></a>
+				<a href="http://instagram.com"><img class="buttons" src="images/instagram.png" alt="Instagram"/></a>
+				<a href="http://reddit.com"><img class="buttons" src="images/reddit.png" alt="Reddit"/></a>
+				<a href="http://forums.somethingawful.com"><img class="buttons" src="images/somethingawful.png" alt="SA"/></a>
+				<a href="http://twitter.com"><img class="buttons" src="images/twitter.png" alt="Twitter"/></a>
+				<a href="http://stumbleupon.com/home/"><img class="buttons" src="images/stumbleupon.png" alt="StumbleUpon"/></a>	
+				<a href="http://forum.xda-developers.com/showthread.php?t=2539361"><img class="buttons" src="images/xda.png" alt="XDA"/></a>
+				<a href="http://www.linkedin.com/"><img class="buttons" src="images/linkedin.png" alt="LinkedIn"/></a>
+				<a href="https://read.amazon.com/"><img class="buttons" src="images/kindle.png" alt="Kindle"/></a>
+				<a href="http://www.fitbit.com/login"><img class="buttons" src="images/fitbit.png" alt="FitBit"/></a>
+			</span>
+			<span class="news_shortcuts">
+				<a href="http://thepiratebay.se/"><img class="buttons" src="images/piratebay.png" alt="The Pirate Bay"/></a>
+				<a href="http://kat.ph/"><img class="buttons" src="images/kat.png" alt="Kick Ass Torrents"/></a>
+				<a href="http://eztv.it/"><img class="buttons" src="images/eztv.png" alt="ezTV"/></a>			
+				<a href="http://bibliotik.org/"><img class="buttons" src="images/bibliotik.png" alt="Bibliotik"/></a>
+				<a href="https://cloudconvert.org/"><img class="buttons" src="images/cloudconvert.png" alt="Cloud Convert"/></a>
+				<a href="http://edition.cnn.com/?hpt=ed_Intl"><img class="buttons" src="images/cnn.png" alt="CNN"/></a>
+				<a href="http://www.pitchfork.com"><img class="buttons" src="images/pitchfork.png" alt="Pitchfork"/></a>				
+				<a href="http://www.cbc.ca/news/"><img class="buttons" src="images/cbc.png" alt="CBC"/></a>
+				<a href="http://www.cbc.ca/liveradio/popup/?networkKey=cbc_radio_one&programKey=toronto"><img class="buttons" src="images/cbcradio.png" alt="CBC Radio 1"/></a>
+				<a href="http://www.chch.com/live/"><img class="buttons" src="images/chch.png" alt="CHCH Live"></a>
+				<a href="http://www.netflix.com/WiHome"><img class="buttons" src="images/netflix.png" alt="Netflix"></a>
+			</span>
+			<span class="work_shortcuts">
+				<a href="https://msdn.microsoft.com/en-us/subscriptions/securedownloads/hh442898"><img class="buttons" src="images/msdn.png" alt="MSDN"/></a>
+				<a href="http://www.dell.com/support/drivers/ca/en/calca1/ProductSelector"><img class="buttons" src="images/dell.png" alt="Dell"></a>
+				<a href="https://customers.esri.com/index.cfm?event=portlet.dspTasks"><img class="buttons" src="images/esri.png" alt="ESRI"/></a>
+				<a href="https://pwgsc-nh.webex.com/mw0307l/mywebex/default.do?siteurl=pwgsc-nh"><img class="buttons" src="images/webex.png" alt="WebEx"/></a>
+				<a href="https://owa.ec.gc.ca/CookieAuth.dll?GetLogon?curl=Z2Fexchange&reason=0&formdir=1"><img class="buttons" src="images/owa.png" alt="OWA"/></a>				
+			</span>				
+			<span class="services_shortcuts">
+				<a href="https://mobility.telus.com/sso/UI/Login?realm=telus&service=telusmobility&locale=en&goto=&encoded=false"><img class="buttons" src="images/telus.png" alt="TELUS"/></a>
+				<a href="https://www.koodomobile.com/sso/UI/Login?realm=koodo&locale=en&goto=aHR0cHM6Ly9zZWN1cmUua29vZG9tb2JpbGUuY29tOjQ0My9hY2NvdW50L215S29vZG8ucG9ydGFs&encoded=true"><img class="buttons" src="images/koodo.png" alt="Koodo"/></a>
+				<a href="http://www.385lean.com/schedule/"><img class="buttons" src="images/leanandfit.png" alt="John Savidis' Lean and Fit"/></a>
+				<a href="https://www.averagejoesports.ca/members/teams-show.php?team_id=6072"><img class="buttons" src="images/averagejoes.png" alt="Average Joes"/></a>
+				<a href="https://myaccount.uniongas.com/"><img class="buttons" src="images/uniongas.png" alt="Union Gas"/></a>
+				<a href="https://www.horizonutilities.com/pages/login.aspx"><img class="buttons" src="images/horizon.png" alt="Horizon Utilities"/></a>
+				<a href="http://www.reliancehomecomfort.com/MyReliance/Pages/MyReliance.aspx"><img class="buttons" src="images/reliance.png" alt="Reliance Home Comfort"/></a>
+				<a href="https://easyweb.td.com/"><img class="buttons" src="images/td.png" alt="TD Canada Trust"/></a>
+				<a href="https://www.prestocard.ca/en-US/Pages/TransactionalPages/AccountLogin.aspx"><img class="buttons" src="images/presto.png" alt="Presto"/></a>
+			</span>
+			<span class="services_shortcuts">
+				<a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=43.250019,-79.866089"><img src="images/wu.png" class="buttons" alt="Wunderground"></a>
+				<a href="http://www.accuweather.com/en/ca/hamilton/l8r/weather-forecast/55490?partner=Googleonex"><img src="images/accuweather.png" class="buttons" alt="AccuWeather"></a>
+				<a href="http://www.weatheroffice.gc.ca/city/pages/on-77_metric_e.html"><img src="images/ec.png" class="buttons" alt="Weather Office"></a>
+				<a href="http://ca.weather.yahoo.com/canada/ontario/hamilton-24129006/"><img src="images/yahoo.png" class="buttons" alt="Yahoo!"></a>
+				<a href="http://www.theweathernetwork.com/weather/canada/ontario/hamilton"><img src="images/twn.png" class="buttons" alt="TWN"></a>
+				<a href="http://www.weatherforecastmap.com/canada/hamilton"><img src="images/openweather.png" class="buttons" alt="OpenWeather"></a>			
+			</span>
+			<div class="weather_shortcuts">
+				<script src="http://www.weatherforecastmap.com/weather11.php?zona=canada_hamilton"></script>
+			</div>				
+		</div>
+	</body>
+</html>
